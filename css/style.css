@@ -1,9 +1,17 @@
 body {
-    background: url('../img/background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-	  
+  background: url('../img/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;	  
+}
+
+#belonaImage{
+  width: 63%;
+}
+#divisor{
+  height: 800px;
+  position: absolute;
+  left: 790px;
 }
 
