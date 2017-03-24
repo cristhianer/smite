@@ -14,4 +14,10 @@ body {
   position: absolute;
   left: 790px;
 }
+#logo{
+  position: relative;
+  left: 80px;
+  width: 80%;
+  top: -450px;
+}
 
