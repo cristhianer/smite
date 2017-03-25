@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
 body {
   background: url('../img/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -21,3 +23,28 @@ body {
   top: -450px;
 }
 
+.login{
+  border: 2px solid red;
+  position: relative;
+  left: 200px;
+  top: -600px;
+}
+.divisorLogin{
+  width: 4%;
+  
+}
+.firstStepLoginActivated{
+  color: white;
+}
+.secondStepLoginDisabled{
+  color: white;
+}
+#loginTitle{
+  color: rgb(244,100,3);
+  text-transform: uppercase;
+  font-family: 'Exo', sans-serif;
+  font-size: 24px;
+}
+#loginTitle2{
+  font-size: 32px;
+}
