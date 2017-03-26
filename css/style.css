@@ -1,33 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 body {
-  background: url('../img/background.jpg') no-repeat center center fixed;
+ /* background: url('../img/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;	  
+  -o-background-size: cover;*/
 }
 
+#background{
+  position: absolute;
+}
 #belonaImage{
+  position: absolute;
   width: 63%;
+  z-index: 2;
 }
 #divisor{
-  height: 800px;
   position: absolute;
-  left: 790px;
+  left: 750px;
+  height: 760px;
 }
 #logo{
-  position: relative;
-  left: 80px;
-  width: 80%;
-  top: -450px;
+  position: absolute;
+  left: 50px;
+  top: 300px;
+  z-index: 3;
 }
 
 .login{
   border: 2px solid red;
-  position: relative;
-  left: 200px;
-  top: -600px;
+  position: absolute;
+  z-index: 4;
+  top: 250px;
+  left: 300px;
 }
 .divisorLogin{
   width: 4%;
