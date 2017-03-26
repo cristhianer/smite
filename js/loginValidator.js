@@ -1,8 +1,15 @@
 $(document).ready(function () {
-	console.log("oi");
-
-
+	
+	/*loading delay*/
 	$('#loginButton').click(function(){
+
+		$('#loading').show(0).delay(5000).hide(0);
+		setTimeout(validateData, 5000)
+	});
+
+
+
+	function validateData(){
 	    var email=$('#email').val();
 	    console.log(email);
 	    var emailReg = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -32,14 +39,8 @@ $(document).ready(function () {
  	        $('#password-error').hide();           
         	$('#password-confirmed').show();
         }
-
-
-
-
-
-
-        
-	});
+    }   
+	
 	  
 
 });
