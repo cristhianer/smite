@@ -39,12 +39,6 @@ body {
   width: 4%;
   
 }
-.firstStepLoginActivated{
-  color: white;
-}
-.secondStepLoginDisabled{
-  color: white;
-}
 #loginTitle{
   color: rgb(244,100,3);
   text-transform: uppercase;
@@ -55,6 +49,29 @@ body {
   font-size: 32px;
 }
 
+/*LOGIN STEPS*/
+#stepsHeader{
+
+  
+}
+.gray-border-bottom-disabled:after {
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    content: "";
+    width: 80%;
+    height: 1px;
+    background: rgba(186, 192, 193, 0.72);
+    margin-top: -27px;
+    left: 10%;
+}
+
+.firstStepLoginActivated{
+  color: white;
+}
+.secondStepLoginDisabled{
+  color: white;
+}
 
 /*FORM*/
 .input-group-addon {
