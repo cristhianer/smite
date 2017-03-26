@@ -22,21 +22,23 @@
 
 
 <body>
-   <img src="img/background.jpg" class="img-responsive center-block" id="background"/> 
-   <img src="img/belona.png" class="img-responsive" id="belonaImage" alt="Imagem de fundo - Belona"/>
-   <img src="img/divisor.png" class="img-responsive" id="divisor" alt="Divisor de tela esquerda e direita"/>
-
+<div id="rightHalf"></div>
+   <!-- <div id="backgroundGroup">
+       <img src="img/background.jpg" class="img-responsive center-block" id="background"/> 
+       <img src="img/belona.png" class="img-responsive center-block" id="belonaImage" alt="Imagem de fundo - Belona"/>
+       <img src="img/divisor.png" class="img-responsive" id="divisor" alt="Divisor de tela esquerda e direita"/>
+   </div> -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-6 vertical-center horizontal-center">
                 <img src="img/logo.png" class="img-responsive" id="logo" alt="Logo Arena dos Deuses - Smite"/>   
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-6 vertical-center">
                 <div class="login">     
                     <div class="col-xs-12" id="stepsHeader">
                         <div class="col-xs-3 col-xs-offset-3">
                             <p class="text-center game-feature-header firstStepLoginActivated">1</p><br/>    
-                            <div class="text-center gray-border-bottom-disabled game-feature-description"></div>  
+                            <div class="text-center orange-border-bottom-abled game-feature-description"></div>  
                         </div> 
                         <div class="col-xs-3">
                             <p class="text-center game-feature-header secondStepLoginDisabled">2</p><br/>    
@@ -61,7 +63,9 @@
                                 </span>
                             </input> 
                         </div>   
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <div class="col-md-3 col-md-offset-3">
+                        <button type="submit" class="btn text-uppercase">Entrar</button>
+                        </div>
                               
                     </form>
                  </div> 
