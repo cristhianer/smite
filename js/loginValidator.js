@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	
 	$('[data-toggle="tooltip"]').tooltip();
-	
+
 	/*loading delay*/
 	$('#loginButton').click(function(){
 
@@ -10,6 +10,20 @@ $(document).ready(function () {
 		$('#loginButton').attr('disabled', 'true');
 		setTimeout(validateData, 5000)
 	});
+
+	function checkScreenSize() {
+		
+		if($(window).width() <= 480) {
+			$('#desktopWindow').hide();
+			$('#mobileWindow').show();
+		} else {
+			$('#mobileWindow').hide();
+			$('#desktopWindow').show();
+			$('#belona-background').show();
+		}
+	}
+
+	checkScreenSize();
 
 	function validateData() {
 	    var email = $('#email').val();
