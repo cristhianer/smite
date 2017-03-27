@@ -22,13 +22,13 @@
 
 
 <body>
-<div id="belona-background"></div>
-    <div class="container-fluid">
+<div id="belona-background" style="display: none;"></div>
+    <div class="container-fluid" style="display: none;">
         <div class="row">
             <div class="col-xs-6 vertical-center horizontal-center">
                 <img src="img/logo.png" class="img-responsive" id="logo" alt="Logo Arena dos Deuses - Smite"/>   
             </div>
-            <div class="col-xs-6 ">
+            <div class="col-xs-6">
                 <!-- LOGIN -->
                 <div class="login" style="display: block;">     
                     <div class="col-xs-12" id="stepsHeader">
@@ -43,9 +43,10 @@
                     </div>             
 
                     <section id="loginTitle"> Entre com sua <p id="loginTitle2"> conta level Up</p> </section>
+                    
                     <form>
                         <div class="input-group">
-                            <input type="text" id="email" class="form-control" placeholder="Login ou e-mail" aria-describedby="basic-addon2">
+                            <input type="text" id="email" class="form-control" data-toggle="tooltip" data-placement="left" title="Insira um e-mail válido!" placeholder="Login ou e-mail" aria-describedby="basic-addon2">
                                 <span class="input-group-addon" id="basic-addon2 emailIcon">
                                     <img src="img/login-standard.svg" class="icons" id="login-standard" alt="login-standard" style="display: block;" />
                                     <img src="img/login-error.svg" class="icons" id="login-error" alt="login-error" style="display: none;" />
@@ -53,8 +54,9 @@
                                 </span>
                             </input>    
                         </div>        
+                        <!--<span class="errorMessage" id="passwordError">Sua senha deve conter ao menos 6 caracteres, 1 caractere especial (!#@$%) e 1 número.</span>-->
                         <div class="input-group">
-                             <input type="password" id="password" class="form-control" placeholder="Senha" aria-describedby="basic-addon2">
+                             <input type="password" id="password" class="form-control" data-toggle="tooltip" data-placement="left" title="Sua senha deve ser de ao menos 6 caracteres e conter 1 caracter especial e 1 número!" placeholder="Senha" aria-describedby="basic-addon2">
                                 <span class="input-group-addon" id="basic-addon2 passwordIcon">
                                     <img src="img/password-standard.svg" class="icons" id="password-standard" alt="password-standard" style="display: block;" />
                                     <img src="img/password-error.svg" class="icons" id="password-error" alt="password-error" style="display: none;"/> 
@@ -106,6 +108,91 @@
         </div>
     </div>
 
+    <!-- MOBILE -->
+    <div class="container-fluid" style="display: block;">
+        <div class="row">
+            <div class="col-xs-12 horizontal-center">
+                <img src="img/logo.png" class="img-responsive" id="logo" alt="Logo Arena dos Deuses - Smite"/>   
+            </div>
+            <div class="col-xs-12">
+                <!-- LOGIN -->
+                <div class="login" style="display: block;">     
+                    <div class="col-xs-12" id="stepsHeader">
+                        <div class="col-xs-3 col-xs-offset-3 stepDistance">
+                            <p class="text-center firstStepLoginActivated">1</p><br/>    
+                            <div class="text-center orange-border-bottom-abled"></div>  
+                        </div> 
+                        <div class="col-xs-3 stepDistance">
+                            <p class="text-center secondStepLoginDisabled">2</p><br/>    
+                            <div class="text-center gray-border-bottom-disabled"></div>      
+                        </div>     
+                    </div>             
+
+                    <section id="loginTitle"> Entre com sua <p id="loginTitle2"> conta level Up</p> </section>
+                    
+                    <form>
+                        <div class="input-group">
+                            <input type="text" id="email" class="form-control" data-toggle="tooltip" data-placement="left" title="Insira um e-mail válido!" placeholder="Login ou e-mail" aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="basic-addon2 emailIcon">
+                                    <img src="img/login-standard.svg" class="icons" id="login-standard" alt="login-standard" style="display: block;" />
+                                    <img src="img/login-error.svg" class="icons" id="login-error" alt="login-error" style="display: none;" />
+                                    <img src="img/login-confirmed.svg" class="icons" id="login-confirmed" alt="login-confirmed" style="display: none;" />
+                                </span>
+                            </input>    
+                        </div>        
+                        <!--<span class="errorMessage" id="passwordError">Sua senha deve conter ao menos 6 caracteres, 1 caractere especial (!#@$%) e 1 número.</span>-->
+                        <div class="input-group">
+                             <input type="password" id="password" class="form-control" data-toggle="tooltip" data-placement="left" title="Sua senha deve ser de ao menos 6 caracteres e conter 1 caracter especial e 1 número!" placeholder="Senha" aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="basic-addon2 passwordIcon">
+                                    <img src="img/password-standard.svg" class="icons" id="password-standard" alt="password-standard" style="display: block;" />
+                                    <img src="img/password-error.svg" class="icons" id="password-error" alt="password-error" style="display: none;"/> 
+                                    <img src="img/password-confirmed.svg" class="icons" id="password-confirmed" alt="password-confirmed" style="display: none;"/>                                   
+                                </span>
+                            </input> 
+                        </div>   
+                        <div class="col-md-3 col-md-offset-3">
+                            <button type="button" id="loginButton" class="btn text-uppercase">Entrar</button>
+                        </div>
+                        <div class="col-md-12">
+                            <img src="img/loading2.gif" id="loading" alt="loading" style="display: none;"/> 
+                        </div>
+                    </form>
+                 </div>
+
+                 <!-- DOWNLOAD -->
+                 <div class="downloadHeader" style="display: none;">     
+                    <div class="col-xs-12" id="stepsHeader">
+                        <div class="col-xs-3 col-xs-offset-3 stepDistance">
+                            <p class="text-center firstStepLoginActivated">1</p><br/>    
+                            <div class="text-center gray-border-bottom-disabled"></div>  
+                        </div> 
+                        <div class="col-xs-3 stepDistance">
+                            <p class="text-center secondStepLoginDisabled">2</p><br/>    
+                            <div class="text-center orange-border-bottom-abled"></div>
+                        </div>     
+                    </div>             
+
+                    <section id="downloadTitle"> Agora é só se divertir! </section>
+                    <section id="downloadSubtitle"> &nbsp; Baixe o jogo e comece sua aventura! </section>
+                   
+                    <div class="col-xs-12">
+                        <button type="button" class="btn text-uppercase download-button">Download</button>
+                    </div>
+                 </div> 
+            </div>        
+         <footer>
+            <div class="col-xs-12">
+                <span id="verticalLine">
+                    <a href="http://levelupgames.uol.com.br/levelup/" class="footerClick"><img src="img/levelup.png" alt="Level Up logo"/></a>
+                </span>
+                <a href="http://www.hirezstudios.com/?lang=pt_BR" class="footerClick"><img src="img/hi-rez.png" alt="hi-rez logo"/></a>
+                 <p class="footerText"> &#169;2015, Level Up Interactive S.A. Todos os direitos reservados. Copyright &#169;2007-2014 Hi-rez Studios, Inc. </p>
+                <p class="footerText">Todos os direitos reservados. SMITE&#169; é uma marca registrada da Hi-rez Studios, Inc.</p>
+                  
+            </div>    
+         </footer>        
+        </div>
+    </div>
 
 
     <!-- jQuery -->

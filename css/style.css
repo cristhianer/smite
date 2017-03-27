@@ -14,7 +14,6 @@ body {
   background-repeat: no-repeat;
   background-position: left;
 }
-
 /*#background{
   position: absolute;
   z-index: -10;
@@ -176,10 +175,16 @@ body {
   display: flex;
   align-items: center;
 }
+
 .horizontal-center {
   /*min-width: 100%;   Fallback for browsers do NOT support vh unit 
   min-width: 100vh; /* These two lines are counted as one 😊       */
   justify-content: center;
+}
+
+.errorMessage {
+  color: red !important;
+  font-size: 1em;
 }
 
 /* DOWNLOAD NOW */
@@ -244,4 +249,36 @@ footer {
   z-index: 4;
   margin: auto !important;
   padding-top: 5% !important;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  #belona-background {
+    width: 0%;
+  }
+
+  #logo {
+    max-width: 70%;
+  }
+
+  .stepDistance {
+    margin-top: 5%;
+  }
+
+  .horizontal-center {
+    /*min-width: 100%;   Fallback for browsers do NOT support vh unit 
+    min-width: 100vh; /* These two lines are counted as one 😊       */
+    display: flex;
+    align-items: center;
+  }
+
+  footer {
+    bottom: 10px !important;
+    z-index: 5 !important;
+    color: rgb(160,158,159) !important;
+    right: 0px !important;
+    justify-content: center !important;
+    position: absolute !important;
+    text-align: center !important;
+  }
 }

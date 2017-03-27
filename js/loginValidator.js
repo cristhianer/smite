@@ -1,5 +1,7 @@
 $(document).ready(function () {
 	
+	$('[data-toggle="tooltip"]').tooltip();
+	
 	/*loading delay*/
 	$('#loginButton').click(function(){
 
@@ -15,11 +17,11 @@ $(document).ready(function () {
 	    var emailOK = false;
 	    
 	    if( !emailReg.test( email ) ) {
-	        alert('Please enter valid email');
+	        //alert('Please enter valid email');
 	        $('#login-standard').hide();
 	        $('#login-error').show();
 	    } else {
-        	alert('Thank you for your valid email');
+        	//alert('Thank you for your valid email');
 	        $('#login-standard').hide();      
 	        $('#login-error').hide();	          	
         	$('#login-confirmed').show();
@@ -31,11 +33,11 @@ $(document).ready(function () {
 	    var passwordOK = false;
 	    
 	    if( !passwordReg.test(password) ) {
-	        alert('Please enter valid password');
+	        //alert('Please enter valid password');
 	        $('#password-standard').hide();
 	        $('#password-error').show();
 	    } else {
-        	alert('Thank you for your valid password');
+        	//alert('Thank you for your valid password');
             $('#password-standard').hide();        	
  	        $('#password-error').hide();           
         	$('#password-confirmed').show();
