@@ -3,16 +3,16 @@ $(document).ready(function () {
 	/*loading delay*/
 	$('#loginButton').click(function(){
 
-		$('#loading').show(0).delay(5000).hide(0);
+		$('#loading').css('display', 'block').delay(5000).hide(0);
+		$('#loginButton').css('background', 'gray');
+		$('#loginButton').attr('disabled', 'true');
 		setTimeout(validateData, 5000)
 	});
 
-
-
-	function validateData(){
-	    var email=$('#email').val();
-	    console.log(email);
+	function validateData() {
+	    var email = $('#email').val();
 	    var emailReg = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	    var emailOK = false;
 	    
 	    if( !emailReg.test( email ) ) {
 	        alert('Please enter valid email');
@@ -23,11 +23,12 @@ $(document).ready(function () {
 	        $('#login-standard').hide();      
 	        $('#login-error').hide();	          	
         	$('#login-confirmed').show();
+        	emailOK = true;
         }
 
-	    var password=$('#password').val();
-	    console.log(password);
-	    var passwordReg = /((?=.*\d)(?=.*[a-z])(?=.*[@#$%]).{6,20})/;
+	    var password = $('#password').val();
+	    var passwordReg = /((?=.*\d)(?=.*[a-z])(?=.*[!@#$%&*)()]).{6,20})/;
+	    var passwordOK = false;
 	    
 	    if( !passwordReg.test(password) ) {
 	        alert('Please enter valid password');
@@ -38,6 +39,14 @@ $(document).ready(function () {
             $('#password-standard').hide();        	
  	        $('#password-error').hide();           
         	$('#password-confirmed').show();
+        	passwordOK = true;
+        }
+
+        $('#loginButton').css('background', '').prop("disabled", false);
+
+        if(emailOK && passwordOK) {
+        	$('.downloadHeader').show();
+        	$('.login').hide();
         }
     }   
 	
