@@ -23,7 +23,9 @@ $(document).ready(function () {
 		}
 	}
 
-	checkScreenSize();
+	$(window).resize(function(){
+	    checkScreenSize();
+	});
 
 	function validateData() {
 	    var email = $('#email').val();
